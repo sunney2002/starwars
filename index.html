@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		img {
+			position: absolute;
+		}
+		.xwing {
+			display: none;
+			transform: scale(-1, 1);
+		}
+		.sid {
+			display: none;
+		}
+		button {
+			position: absolute;
+		}
+	</style>
+</head>
+<body style="margin: 0">
+	<div style="background-image: url(cosmos.jpg); height: 800px; background-size: 100% 100%">
+		<button class="button1" style="">ATTACK!</button>
+		<button class="button2" style="margin-left: 80%">DEFENCE!</button>
+		<button class="button3" style="margin-top: 45%">HELP GUARD!</button>
+		<button class="button4" style="margin-left: 80%; margin-top: 45%">HELP GUARD!</button>	
+			<div class="row"><p style="margin-left: 20%; color: white">KILLS </p>	
+			<p class="point1" style="margin-left: 20%; color: white">0</p>
+	
+			<p style="margin-left: 70%;margin-top: -4%; color: white">KILLS</p>
+			<p class="point2" style="margin-left: 70%; color: white">0</p>
+
+		<img src="deathstar.png" alt="" style="margin-left: 30%; margin-top: 10%">
+
+
+		<img class="xwing" src="asd.png" alt="" style=" width: 10%;  margin-top: 10%"> 
+		<img class="xwing" src="asd.png" alt="" style=" width: 10%;  margin-top: 20%">
+		<img class="xwing" src="asd.png" alt="" style=" width: 10%;  margin-top: 30%">
+		<img class="xwing" src="asd.png" alt="" style=" width: 10%;  margin-top: 40%">
+		<img class="xwing" src="asd.png" alt="" style=" width: 10%;  margin-top: 1%">
+		<img class="xwing" src="asd.png" alt="" style=" width: 10%;  margin-top: 10%; margin-left: 10%">
+		<img class="xwing" src="asd.png" alt="" style=" width: 10%;  margin-top: 20%; margin-left: 10%">
+		<img class="xwing" src="asd.png" alt="" style=" width: 10%;  margin-top: 30%; margin-left: 10%">
+		<img class="xwing" src="asd.png" alt="" style=" width: 10%;  margin-top: 40%; margin-left: 10%">
+		<img class="xwing" src="asd.png" alt="" style=" width: 10%;  margin-top: 1%; margin-left: 10%">
+
+
+		<img class="sid" src="sid.png" alt="" style="width: 5%;  margin-top: 10%; margin-left: 70%">
+		<img class="sid" src="sid.png" alt="" style="width: 5%;  margin-top: 20%; margin-left: 70%">
+		<img class="sid" src="sid.png" alt="" style="width: 5%;  margin-top: 30%; margin-left: 70%">
+		<img class="sid" src="sid.png" alt="" style="width: 5%;  margin-top: 40%; margin-left: 70%">
+		<img class="sid" src="sid.png" alt="" style="width: 5%;  margin-top: 1%; margin-left: 70%">
+		<img class="sid" src="sid.png" alt="" style="width: 5%;  margin-top: 40%; margin-left: 90%">
+		<img class="sid" src="sid.png" alt="" style="width: 5%;  margin-top: 30%; margin-left: 90%">
+		<img class="sid" src="sid.png" alt="" style="width: 5%;  margin-top: 20%; margin-left: 90%">
+		<img class="sid" src="sid.png" alt="" style="width: 5%;  margin-top: 10%; margin-left: 90%">
+		<img class="sid" src="sid.png" alt="" style="width: 5%;  margin-top: 1%; margin-left: 90%">
+
+	</div>
+
+	<script>
+		let x = 0;
+		let y = 0;
+		let xwing = document.querySelectorAll(".xwing");
+		let sid = document.querySelectorAll(".sid");
+
+		document.querySelector(".button1").onclick = function(){
+			for(let index = 0; index<10; index = index + 1){
+				xwing[index].style.display="block";
+			}
+			for(let index = 0; index<10; index = index + 1){
+				xwing[index].onclick = function(){
+				xwing[index].style.display = "none";
+				x = x + 1;
+				document.querySelector(".point1").innerHTML = x;
+				}
+        	}		
+		}
+
+		document.querySelector(".button2").onclick = function(){
+			for(let index = 0; index<10; index = index + 1){
+				sid[index].style.display="block";
+			}
+			for(let index = 0; index<10; index = index + 1){
+				sid[index].onclick = function(){
+				sid[index].style.display = "none";
+				y = y + 1;
+				document.querySelector(".point2").innerHTML = y;
+				}
+        	}	
+		}
+	</script>
+</body>
+</html>
